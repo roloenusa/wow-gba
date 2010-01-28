@@ -37,7 +37,7 @@ namespace XMLTest
         {
             InitializeComponent();
             configs = new configurations();
-            PlayerTransactions.Configurations = configs = configurations.getConfigurations();
+            PlayerTransactions.Configurations = configs = (configurations)Util.DeserializeXML("config.xml", typeof(configurations));
 
             dataGridView2.DataSource = configs.Weights[0].TypeList;
             dataGridView3.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList;
@@ -52,7 +52,7 @@ namespace XMLTest
 
                 //Get the transactions from the Original File
                 string path = openFileDialog1.FileName; // The Path to the .Xml file //
-                file1 = deserializePage(path);
+                file1 = (page)Util.DeserializeXML(path, typeof(page));
 
                 bl1.Clear();
                 foreach (pageGuildInfoGuildBankBanklogsBanklog r in file1.guildInfo[0].guildBank[0].banklogs[0].banklog)
@@ -73,7 +73,7 @@ namespace XMLTest
 
                 //Get the transactions from the web
                 string path = openFileDialog1.FileName; // The Path to the .Xml file //                
-                file2 = deserializePage(path);
+                file2 = (page)Util.DeserializeXML(path, typeof(page));
 
                 bl2.Clear();
                 foreach (pageGuildInfoGuildBankBanklogsBanklog r in file2.guildInfo[0].guildBank[0].banklogs[0].banklog)
@@ -98,7 +98,7 @@ namespace XMLTest
             {
                 //Get the transactions from the web
                 string path = saveFileDialog1.FileName; // The Path to the .Xml file //                
-                serializePage(path, file1);
+                Util.SerializeXML(path, file1, typeof(page));
             }
 
         }
@@ -193,26 +193,6 @@ namespace XMLTest
             return 0;
         }
 
-        private static page deserializePage(string filePath)
-        {
-            System.IO.StreamReader str = new System.IO.StreamReader(filePath);
-            System.Xml.Serialization.XmlSerializer xSerializer = new System.Xml.Serialization.XmlSerializer(typeof(page));
-            page res = (page)xSerializer.Deserialize(str);
-            str.Close();
-
-            return res;
-        }
-
-        private static void serializePage(string filePath, page res)
-        {
-            //TEST FOR WRITER
-            System.IO.StreamWriter strOut = new System.IO.StreamWriter("Test.xml");
-            System.Xml.Serialization.XmlSerializer xSerializerOut = new System.Xml.Serialization.XmlSerializer(typeof(page));
-            xSerializerOut.Serialize(strOut, res);
-
-            strOut.Close();
-        }
-
         private static int findIndexOfEqual(string str, List<pageGuildInfoGuildBankBanklogsBanklog> bl2)
         {
             int i = 0;
@@ -242,7 +222,8 @@ namespace XMLTest
             if (MessageBox.Show("Confirmation Box", "title?", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Console.WriteLine(DialogResult.Yes.ToString());
-                configurations.saveConfigurations(configs);
+                //configurations.saveConfigurations(configs);
+                Util.SerializeXML("config.xml", configs, typeof(configurations));
             }
         }
 
