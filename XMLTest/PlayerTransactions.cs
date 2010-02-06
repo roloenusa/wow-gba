@@ -48,6 +48,7 @@ namespace XMLTest
         SortedList<long, pageGuildInfoGuildBankBanklogsBanklog> bankLog;
 
         static private configurations configurations;
+        static private List<wowhead> itemCache;
 
         #region Constructors
 
@@ -79,12 +80,17 @@ namespace XMLTest
 
         #endregion
 
-        #region Setters and Getters
+        #region Getters and Setters
 
         static public configurations Configurations
         {
             get { return configurations; }
             set { configurations = value; }
+        }
+
+        static public List<wowhead> ItemCache
+        {
+            set { itemCache = value; }
         }
 
         public string Player
@@ -190,9 +196,8 @@ namespace XMLTest
 
         private int getItemWeight(string type, string subtype, int id)
         {
-            int tindex = configurations.Weights[0].getTypeIndex(type);
-            int stindex = configurations.Weights[0].TypeList[tindex].GetSubtypeIndex(subtype);
-            return configurations.Weights[0].TypeList[tindex].subTypeList[stindex].GetItemById(id).weight;
+            
+            return 1;
         }
 
         #endregion

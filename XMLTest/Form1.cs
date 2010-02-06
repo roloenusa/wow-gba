@@ -11,6 +11,7 @@ using System.Xml;
 using System.IO;
 
 using System.Xml.Serialization;
+using System.Linq;
 
 namespace XMLTest
 {
@@ -18,7 +19,11 @@ namespace XMLTest
     {
         List<pageGuildInfoGuildBankBanklogsBanklog> bl1 = new List<pageGuildInfoGuildBankBanklogsBanklog>();
         List<pageGuildInfoGuildBankBanklogsBanklog> bl2 = new List<pageGuildInfoGuildBankBanklogsBanklog>();
-        
+
+        List<pageGuildInfoGuildBankBanklogsBanklogItem> itemList = new List<pageGuildInfoGuildBankBanklogsBanklogItem>();
+        Cache<int, wowhead> cache = new Cache<int, wowhead>();
+        DataTable dt = wowhead.CreateTable("CachedItems");
+
         //Configurations and settings
         configurations configs;
         int typeRow = 0;
@@ -39,9 +44,7 @@ namespace XMLTest
             configs = new configurations();
             PlayerTransactions.Configurations = configs = (configurations)Util.DeserializeXML("config.xml", typeof(configurations));
 
-            dataGridView2.DataSource = configs.Weights[0].TypeList;
-            dataGridView3.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList;
-            dataGridView4.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList[subTypeRow].ItemList;
+            dgvCachedItems.DataSource = dt;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -164,9 +167,20 @@ namespace XMLTest
 
             }
 
-            dataGridView1.DataSource = pt;
+            dgvPlayerSumary.DataSource = pt;
+            dgvParsedItems.DataSource = itemList;
 
             DataGridViewRefresh();
+
+
+            //Linq test
+            var t = from o in pt
+                    //where o.id == 17720
+                    select o.Player;
+
+            foreach (var rslt in t)
+                Console.WriteLine(rslt.ToString());
+            //End Linq test
 
             return bl3.Count.ToString();
 
@@ -174,6 +188,13 @@ namespace XMLTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            List<object> objList = Util.GetCache("cache", typeof(wowhead), ".xml");
+            foreach (object obj in objList)
+            {
+                wowhead t = obj as wowhead;
+                cache.Add(t.Items.id, t);
+                dt.Rows.Add(t.ToObjectArray());
+            }
 
         }
 
@@ -193,30 +214,6 @@ namespace XMLTest
             return 0;
         }
 
-        private static int findIndexOfEqual(string str, List<pageGuildInfoGuildBankBanklogsBanklog> bl2)
-        {
-            int i = 0;
-            for (i = 0; i < bl2.Count; i++)
-                if (str.Equals(bl2[i].ts))
-                    break;
-
-            return i;
-        }
-
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            this.typeRow = e.RowIndex < 0 ? 0 : e.RowIndex;
-            this.subTypeRow = 0;
-            dataGridView3.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList;
-            dataGridView4.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList[subTypeRow].ItemList;
-        }
-
-        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            this.subTypeRow = e.RowIndex < 0 ? 0 : e.RowIndex;
-            dataGridView4.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList[subTypeRow].ItemList;
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Confirmation Box", "title?", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -229,78 +226,117 @@ namespace XMLTest
 
         private void DataGridViewRefresh()
         {
-            dataGridView2.DataSource = null;
-            dataGridView2.DataSource = configs.Weights[0].TypeList;
-            dataGridView3.DataSource = null;
-            dataGridView3.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList;
-            dataGridView4.DataSource = null;
-            dataGridView4.DataSource = configs.Weights[0].TypeList[typeRow].subTypeList[subTypeRow].ItemList;
+            //Set the link name
+            foreach (DataGridViewRow row in dgvParsedItems.Rows)
+            {
+                row.Cells["Link"].Value = row.Cells[5].Value;
+                row.Cells["Link"].ToolTipText = row.Cells[5].Value.ToString();
+            }
+
+            //Refresh datatable.
+            dt.Rows.Clear();
+            for(int i = 0; i < cache.Count; i++)
+            {
+                dt.Rows.Add(cache[i].ToObjectArray());
+            }
+            dgvCachedItems.DataSource = dt;
         }
 
 
         private void AddType(pageGuildInfoGuildBankBanklogsBanklog temp)
         {
+
             //Get the item and add it to the configurations of needed. 
             //We only index new categories if they're not in. 
             if (temp.type == (int)TransactionType.DepositItem ||
                 temp.type == (int)TransactionType.WithdrawItem)
             {
-                int trow = 0;
-                for (trow = 0; trow < configs.Weights[0].TypeList.Count; trow++)
+                if (!Directory.Exists("cache"))
+                    Directory.CreateDirectory("cache");
+
+
+                //Determine if the item needs to be cached.
+                if (!File.Exists("cache\\" + temp.item[0].id.ToString() + ".xml"))
                 {
-                    int strow = 0;
-                    //If the type is in the list, then look for the subtype.
-                    if (temp.item[0].type.Equals(configs.Weights[0].TypeList[trow].name))
+                    //If we're asking to cache all, then cache and add to the list of cached items.
+                    if (checkBoxCacheItems.CheckState == CheckState.Checked)
                     {
-                        for (strow = 0; strow < configs.Weights[0].TypeList[trow].subTypeList.Count; strow++)
-                        {
-                            if (temp.item[0].subtype.Equals(configs.Weights[0].TypeList[trow].subTypeList[strow].name))
-                                break;
-                        }
-
-
-                        //iF the subtype is on the list, then it was found and no need to keep going.
-                        if (strow == configs.Weights[0].TypeList[trow].subTypeList.Count)
-                        {
-                            configs.Weights[0].type[trow].AddSubType(temp.item[0].subtype);
-                        }
-
-
-                        //We check to see if we're going to add and index all items. 
-                        //This is time consuming so we should not do it by default.
-                        if (AddItemsCheckbox.CheckState == CheckState.Unchecked)
-                            break;
-
-                        //Now we look for the item. If it's not on the subtype, we'll add it.
-                        int irow = 0;
-                        for (irow = 0; irow < configs.Weights[0].type[trow].subTypeList[strow].ItemList.Count; irow++)
-                        {
-                            if (temp.item[0].id == configs.Weights[0].type[trow].subTypeList[strow].ItemList[irow].id)
-                                break;
-                        }
-
-                        if (irow == configs.Weights[0].type[trow].subTypeList[strow].ItemList.Count)
-                        {
-                            configs.Weights[0].type[trow].subTypeList[strow].AddItem(new configurationsWeightsTypeSubtypeItem().NewItem(temp.item[0].id, temp.item[0].name, 10));
-                        }
-
-                        //Finally we break the loop because the item was either ignored or added.
-                        break;
+                        wowhead wh = (wowhead)Util.CacheItemFromWeb(temp.item[0].id); 
+                        cache.Add(wh.Items.id, wh);
                     }
-
-                }
-
-                //if the type was not found, then we add the type and subtype. 
-                if (trow == configs.Weights[0].TypeList.Count)
-                {
-                    configs.Weights[0].AddType(temp.item[0].type);
-                    if (!temp.item[0].subtype.Equals(""))
+                    //else add to the list of items that could be cached.
+                    else
                     {
-                        configs.Weights[0].TypeList[trow].AddSubType(temp.item[0].subtype);
+                        itemList.Add(temp.item[0]);
                     }
                 }
-                /**/
+            }
+        
+        }
+
+
+
+        wowhead wh;
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            //We try to see if the user has parsed an item first.
+            int id;
+            if (!int.TryParse(textBoxSearch.Text, out id))
+                return;
+
+            wh = Util.GetItemFromWeb(id);
+            //We have to make sure that the item is not null as this is a possible option.
+            if (wh == null)
+                return;
+
+            Console.WriteLine(wh.Items.name);
+
+            //WebBrowser
+            string strHTML = "<html> \n<head>\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/basic.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/global.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/locale_enus.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/Book.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/Mapper.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/Mapper.css?644\" /><!--[if IE]>\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/global_ie.css?644\" /><![endif]--><!--[if lte IE 6]>\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/basic_ie6.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/global_ie6.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/Mapper_ie6.css?644\" /><![endif]--><!--[if lte IE 7]>\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/basic_ie67.css?644\" />\n";
+            strHTML += "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://static.wowhead.com/css/global_ie67.css?644\" /><![endif]-->\n";
+
+            //strHTML += "<script src=\"http://static.wowhead.com/widgets/power.js\"></script>\n";
+            strHTML += "<script>onload = function() {var links = document.getElementsByTagName('a'); for(var i = 0; i < links.length; ++i) { links[i].setAttribute('target', '_blank');}}</script>";
+            strHTML += "</head>\n";
+
+            strHTML += "<div style=\"float: left; padding-top: 1px;\">\n";
+            strHTML += wh.Items.htmlTooltip + "\n";
+            strHTML += "</div>\n";
+            strHTML += "</html>";
+
+            //webBrowser1.AllowNavigation = true;
+            webBrowser1.DocumentText = strHTML;
+            //webBrowser1.AllowNavigation = false;
+           
+        }
+
+        private void buttonAddToCache_Click(object sender, EventArgs e)
+        {
+            if (wh == null)
+                return;
+
+            if (MessageBox.Show("Are you sure you want to add " + wh.Items.name + " to the cache?", "Adding item to cache", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Util.SerializeXML("cache\\"+wh.Items.id+".xml", wh, wh.GetType());
+                dt.Rows.Add(wh.ToObjectArray());
+                cache.Add(wh.Items.id, wh);
             }
         }
+
+
+
+
+
     }
 }

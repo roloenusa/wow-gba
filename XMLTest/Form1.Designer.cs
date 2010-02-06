@@ -29,97 +29,103 @@ namespace XMLTest
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.buttonConsolidate = new System.Windows.Forms.Button();
+            this.buttonWebLoad = new System.Windows.Forms.Button();
+            this.buttonFileLoad = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonSaveXML = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MoneyDeposits = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoneyWithdrawls = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Repairs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoneyOffset = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.AddItemsCheckbox = new System.Windows.Forms.CheckBox();
-            this.Karma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPlayerSumary = new System.Windows.Forms.DataGridView();
+            this.buttonSaveConfigs = new System.Windows.Forms.Button();
+            this.checkBoxCacheItems = new System.Windows.Forms.CheckBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPlayerSumary = new System.Windows.Forms.TabPage();
+            this.tabParsedItems = new System.Windows.Forms.TabPage();
+            this.dgvParsedItems = new System.Windows.Forms.DataGridView();
+            this.Add = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Link = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.tabPageCache = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.buttonAddToCache = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.dgvCachedItems = new System.Windows.Forms.DataGridView();
+            this.tabConfigs = new System.Windows.Forms.TabPage();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.configurationsWeightsTypeSubtypeItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.configurationsWeightsTypeSubtypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.configurationsWeightsTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberOfTransactionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastTransactionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerTransactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationsWeightsTypeSubtypeItemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationsWeightsTypeSubtypeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationsWeightsTypeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerTransactionsBindingSource)).BeginInit();
+            this.qiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pageGuildInfoGuildBankBanklogsBanklogItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlayerSumary)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPlayerSumary.SuspendLayout();
+            this.tabParsedItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParsedItems)).BeginInit();
+            this.tabPageCache.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCachedItems)).BeginInit();
+            this.tabConfigs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pageGuildInfoGuildBankBanklogsBanklogItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonConsolidate
             // 
-            this.button1.Location = new System.Drawing.Point(12, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Consolidate";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonConsolidate.Location = new System.Drawing.Point(6, 76);
+            this.buttonConsolidate.Name = "buttonConsolidate";
+            this.buttonConsolidate.Size = new System.Drawing.Size(75, 23);
+            this.buttonConsolidate.TabIndex = 0;
+            this.buttonConsolidate.Text = "Consolidate";
+            this.buttonConsolidate.UseVisualStyleBackColor = true;
+            this.buttonConsolidate.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonWebLoad
             // 
-            this.button2.Location = new System.Drawing.Point(12, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Web";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonWebLoad.Location = new System.Drawing.Point(6, 47);
+            this.buttonWebLoad.Name = "buttonWebLoad";
+            this.buttonWebLoad.Size = new System.Drawing.Size(75, 23);
+            this.buttonWebLoad.TabIndex = 1;
+            this.buttonWebLoad.Text = "Web";
+            this.buttonWebLoad.UseVisualStyleBackColor = true;
+            this.buttonWebLoad.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // buttonFileLoad
             // 
-            this.button3.Location = new System.Drawing.Point(12, 47);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "File";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonFileLoad.Location = new System.Drawing.Point(6, 13);
+            this.buttonFileLoad.Name = "buttonFileLoad";
+            this.buttonFileLoad.Size = new System.Drawing.Size(75, 23);
+            this.buttonFileLoad.TabIndex = 2;
+            this.buttonFileLoad.Text = "File";
+            this.buttonFileLoad.UseVisualStyleBackColor = true;
+            this.buttonFileLoad.Click += new System.EventHandler(this.button3_Click);
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "*.xml";
             // 
-            // button4
+            // buttonSaveXML
             // 
-            this.button4.Location = new System.Drawing.Point(12, 170);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Save XML";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonSaveXML.Location = new System.Drawing.Point(6, 105);
+            this.buttonSaveXML.Name = "buttonSaveXML";
+            this.buttonSaveXML.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveXML.TabIndex = 6;
+            this.buttonSaveXML.Text = "Save XML";
+            this.buttonSaveXML.UseVisualStyleBackColor = true;
+            this.buttonSaveXML.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "*.xml";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(136, 52);
+            this.label1.Location = new System.Drawing.Point(143, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 7;
@@ -127,7 +133,7 @@ namespace XMLTest
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(136, 86);
+            this.label2.Location = new System.Drawing.Point(143, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 8;
@@ -135,142 +141,197 @@ namespace XMLTest
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(136, 127);
+            this.label3.Location = new System.Drawing.Point(143, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 9;
             // 
-            // label4
+            // dgvPlayerSumary
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Number of Transactions";
+            this.dgvPlayerSumary.AllowUserToOrderColumns = true;
+            this.dgvPlayerSumary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlayerSumary.Location = new System.Drawing.Point(6, 180);
+            this.dgvPlayerSumary.Name = "dgvPlayerSumary";
+            this.dgvPlayerSumary.Size = new System.Drawing.Size(796, 331);
+            this.dgvPlayerSumary.TabIndex = 11;
             // 
-            // dataGridView1
+            // buttonSaveConfigs
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.playerDataGridViewTextBoxColumn,
-            this.numberOfTransactionsDataGridViewTextBoxColumn,
-            this.lastTransactionDataGridViewTextBoxColumn,
-            this.MoneyDeposits,
-            this.MoneyWithdrawls,
-            this.Repairs,
-            this.MoneyOffset,
-            this.Karma});
-            this.dataGridView1.DataSource = this.playerTransactionsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(240, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(660, 271);
-            this.dataGridView1.TabIndex = 11;
+            this.buttonSaveConfigs.Location = new System.Drawing.Point(35, 55);
+            this.buttonSaveConfigs.Name = "buttonSaveConfigs";
+            this.buttonSaveConfigs.Size = new System.Drawing.Size(88, 23);
+            this.buttonSaveConfigs.TabIndex = 15;
+            this.buttonSaveConfigs.Text = "Save Configs";
+            this.buttonSaveConfigs.UseVisualStyleBackColor = true;
+            this.buttonSaveConfigs.Click += new System.EventHandler(this.button5_Click);
             // 
-            // MoneyDeposits
+            // checkBoxCacheItems
             // 
-            this.MoneyDeposits.DataPropertyName = "MoneyDeposits";
-            this.MoneyDeposits.HeaderText = "MoneyDeposits";
-            this.MoneyDeposits.Name = "MoneyDeposits";
-            this.MoneyDeposits.ReadOnly = true;
+            this.checkBoxCacheItems.AutoSize = true;
+            this.checkBoxCacheItems.Location = new System.Drawing.Point(6, 134);
+            this.checkBoxCacheItems.Name = "checkBoxCacheItems";
+            this.checkBoxCacheItems.Size = new System.Drawing.Size(99, 17);
+            this.checkBoxCacheItems.TabIndex = 17;
+            this.checkBoxCacheItems.Text = "Cache All Items";
+            this.checkBoxCacheItems.UseVisualStyleBackColor = true;
             // 
-            // MoneyWithdrawls
+            // tabControl1
             // 
-            this.MoneyWithdrawls.DataPropertyName = "MoneyWithdrawls";
-            this.MoneyWithdrawls.HeaderText = "MoneyWithdrawls";
-            this.MoneyWithdrawls.Name = "MoneyWithdrawls";
-            this.MoneyWithdrawls.ReadOnly = true;
+            this.tabControl1.Controls.Add(this.tabPlayerSumary);
+            this.tabControl1.Controls.Add(this.tabParsedItems);
+            this.tabControl1.Controls.Add(this.tabPageCache);
+            this.tabControl1.Controls.Add(this.tabConfigs);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(816, 543);
+            this.tabControl1.TabIndex = 18;
             // 
-            // Repairs
+            // tabPlayerSumary
             // 
-            this.Repairs.DataPropertyName = "Repairs";
-            this.Repairs.HeaderText = "Repairs";
-            this.Repairs.Name = "Repairs";
-            this.Repairs.ReadOnly = true;
+            this.tabPlayerSumary.Controls.Add(this.dgvPlayerSumary);
+            this.tabPlayerSumary.Controls.Add(this.checkBoxCacheItems);
+            this.tabPlayerSumary.Controls.Add(this.label3);
+            this.tabPlayerSumary.Controls.Add(this.buttonFileLoad);
+            this.tabPlayerSumary.Controls.Add(this.label2);
+            this.tabPlayerSumary.Controls.Add(this.label1);
+            this.tabPlayerSumary.Controls.Add(this.buttonWebLoad);
+            this.tabPlayerSumary.Controls.Add(this.buttonConsolidate);
+            this.tabPlayerSumary.Controls.Add(this.buttonSaveXML);
+            this.tabPlayerSumary.Location = new System.Drawing.Point(4, 22);
+            this.tabPlayerSumary.Name = "tabPlayerSumary";
+            this.tabPlayerSumary.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPlayerSumary.Size = new System.Drawing.Size(808, 517);
+            this.tabPlayerSumary.TabIndex = 0;
+            this.tabPlayerSumary.Text = "Guild Analyzer";
+            this.tabPlayerSumary.UseVisualStyleBackColor = true;
             // 
-            // MoneyOffset
+            // tabParsedItems
             // 
-            this.MoneyOffset.DataPropertyName = "MoneyOffset";
-            this.MoneyOffset.HeaderText = "Money Offset";
-            this.MoneyOffset.Name = "MoneyOffset";
-            this.MoneyOffset.ReadOnly = true;
+            this.tabParsedItems.Controls.Add(this.dgvParsedItems);
+            this.tabParsedItems.Location = new System.Drawing.Point(4, 22);
+            this.tabParsedItems.Name = "tabParsedItems";
+            this.tabParsedItems.Padding = new System.Windows.Forms.Padding(3);
+            this.tabParsedItems.Size = new System.Drawing.Size(808, 517);
+            this.tabParsedItems.TabIndex = 1;
+            this.tabParsedItems.Text = "New Items";
+            this.tabParsedItems.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvParsedItems
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.configurationsWeightsTypeBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(240, 289);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(143, 242);
-            this.dataGridView2.TabIndex = 12;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn1});
-            this.dataGridView3.DataSource = this.configurationsWeightsTypeSubtypeBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(389, 289);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(146, 242);
-            this.dataGridView3.TabIndex = 13;
-            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.AllowUserToAddRows = false;
-            this.dataGridView4.AllowUserToDeleteRows = false;
-            this.dataGridView4.AutoGenerateColumns = false;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvParsedItems.AutoGenerateColumns = false;
+            this.dgvParsedItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParsedItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Add,
             this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn2,
-            this.weightDataGridViewTextBoxColumn});
-            this.dataGridView4.DataSource = this.configurationsWeightsTypeSubtypeItemBindingSource;
-            this.dataGridView4.Location = new System.Drawing.Point(542, 290);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(358, 241);
-            this.dataGridView4.TabIndex = 14;
+            this.nameDataGridViewTextBoxColumn,
+            this.qiDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.subtypeDataGridViewTextBoxColumn,
+            this.Link});
+            this.dgvParsedItems.DataSource = this.pageGuildInfoGuildBankBanklogsBanklogItemBindingSource;
+            this.dgvParsedItems.Location = new System.Drawing.Point(6, 6);
+            this.dgvParsedItems.Name = "dgvParsedItems";
+            this.dgvParsedItems.Size = new System.Drawing.Size(796, 306);
+            this.dgvParsedItems.TabIndex = 12;
             // 
-            // button5
+            // Add
             // 
-            this.button5.Location = new System.Drawing.Point(12, 211);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Save Configs";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.Add.HeaderText = "Add";
+            this.Add.Name = "Add";
             // 
-            // AddItemsCheckbox
+            // Link
             // 
-            this.AddItemsCheckbox.AutoSize = true;
-            this.AddItemsCheckbox.Location = new System.Drawing.Point(12, 252);
-            this.AddItemsCheckbox.Name = "AddItemsCheckbox";
-            this.AddItemsCheckbox.Size = new System.Drawing.Size(73, 17);
-            this.AddItemsCheckbox.TabIndex = 16;
-            this.AddItemsCheckbox.Text = "Add Items";
-            this.AddItemsCheckbox.UseVisualStyleBackColor = true;
+            dataGridViewCellStyle2.NullValue = "wowhead";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
+            this.Link.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Link.HeaderText = "Link";
+            this.Link.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.Link.Name = "Link";
+            this.Link.Text = "wowhead";
             // 
-            // Karma
+            // tabPageCache
             // 
-            this.Karma.DataPropertyName = "Karma";
-            this.Karma.HeaderText = "Karma";
-            this.Karma.Name = "Karma";
-            this.Karma.ReadOnly = true;
+            this.tabPageCache.Controls.Add(this.groupBox1);
+            this.tabPageCache.Controls.Add(this.dgvCachedItems);
+            this.tabPageCache.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCache.Name = "tabPageCache";
+            this.tabPageCache.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCache.Size = new System.Drawing.Size(808, 517);
+            this.tabPageCache.TabIndex = 2;
+            this.tabPageCache.Text = "Cache";
+            this.tabPageCache.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.webBrowser1);
+            this.groupBox1.Controls.Add(this.buttonAddToCache);
+            this.groupBox1.Controls.Add(this.textBoxSearch);
+            this.groupBox1.Controls.Add(this.buttonSearch);
+            this.groupBox1.Location = new System.Drawing.Point(7, 139);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(795, 332);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(6, 19);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(323, 307);
+            this.webBrowser1.TabIndex = 4;
+            // 
+            // buttonAddToCache
+            // 
+            this.buttonAddToCache.Location = new System.Drawing.Point(588, 49);
+            this.buttonAddToCache.Name = "buttonAddToCache";
+            this.buttonAddToCache.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddToCache.TabIndex = 3;
+            this.buttonAddToCache.Text = "Add";
+            this.buttonAddToCache.UseVisualStyleBackColor = true;
+            this.buttonAddToCache.Click += new System.EventHandler(this.buttonAddToCache_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(482, 19);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearch.TabIndex = 2;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(588, 19);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 1;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // dgvCachedItems
+            // 
+            this.dgvCachedItems.AllowUserToAddRows = false;
+            this.dgvCachedItems.AllowUserToDeleteRows = false;
+            this.dgvCachedItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCachedItems.Location = new System.Drawing.Point(7, 6);
+            this.dgvCachedItems.Name = "dgvCachedItems";
+            this.dgvCachedItems.ReadOnly = true;
+            this.dgvCachedItems.Size = new System.Drawing.Size(795, 113);
+            this.dgvCachedItems.TabIndex = 0;
+            // 
+            // tabConfigs
+            // 
+            this.tabConfigs.Controls.Add(this.buttonSaveConfigs);
+            this.tabConfigs.Location = new System.Drawing.Point(4, 22);
+            this.tabConfigs.Name = "tabConfigs";
+            this.tabConfigs.Padding = new System.Windows.Forms.Padding(3);
+            this.tabConfigs.Size = new System.Drawing.Size(808, 517);
+            this.tabConfigs.TabIndex = 3;
+            this.tabConfigs.Text = "Configuration";
+            this.tabConfigs.UseVisualStyleBackColor = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -278,139 +339,93 @@ namespace XMLTest
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            // 
-            // configurationsWeightsTypeSubtypeItemBindingSource
-            // 
-            this.configurationsWeightsTypeSubtypeItemBindingSource.DataSource = typeof(configurationsWeightsTypeSubtypeItem);
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // configurationsWeightsTypeSubtypeBindingSource
-            // 
-            this.configurationsWeightsTypeSubtypeBindingSource.DataSource = typeof(configurationsWeightsTypeSubtype);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // configurationsWeightsTypeBindingSource
+            // qiDataGridViewTextBoxColumn
             // 
-            this.configurationsWeightsTypeBindingSource.DataSource = typeof(configurationsWeightsType);
+            this.qiDataGridViewTextBoxColumn.DataPropertyName = "qi";
+            this.qiDataGridViewTextBoxColumn.HeaderText = "Item Quality";
+            this.qiDataGridViewTextBoxColumn.Name = "qiDataGridViewTextBoxColumn";
             // 
-            // playerDataGridViewTextBoxColumn
+            // typeDataGridViewTextBoxColumn
             // 
-            this.playerDataGridViewTextBoxColumn.DataPropertyName = "Player";
-            this.playerDataGridViewTextBoxColumn.HeaderText = "Player";
-            this.playerDataGridViewTextBoxColumn.Name = "playerDataGridViewTextBoxColumn";
-            this.playerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             // 
-            // numberOfTransactionsDataGridViewTextBoxColumn
+            // subtypeDataGridViewTextBoxColumn
             // 
-            this.numberOfTransactionsDataGridViewTextBoxColumn.DataPropertyName = "NumberOfTransactions";
-            this.numberOfTransactionsDataGridViewTextBoxColumn.HeaderText = "Number Of Transactions";
-            this.numberOfTransactionsDataGridViewTextBoxColumn.Name = "numberOfTransactionsDataGridViewTextBoxColumn";
-            this.numberOfTransactionsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subtypeDataGridViewTextBoxColumn.DataPropertyName = "subtype";
+            this.subtypeDataGridViewTextBoxColumn.HeaderText = "subtype";
+            this.subtypeDataGridViewTextBoxColumn.Name = "subtypeDataGridViewTextBoxColumn";
             // 
-            // lastTransactionDataGridViewTextBoxColumn
+            // pageGuildInfoGuildBankBanklogsBanklogItemBindingSource
             // 
-            this.lastTransactionDataGridViewTextBoxColumn.DataPropertyName = "LastTransaction";
-            this.lastTransactionDataGridViewTextBoxColumn.HeaderText = "Last Transaction";
-            this.lastTransactionDataGridViewTextBoxColumn.Name = "lastTransactionDataGridViewTextBoxColumn";
-            this.lastTransactionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // playerTransactionsBindingSource
-            // 
-            this.playerTransactionsBindingSource.DataSource = typeof(XMLTest.PlayerTransactions);
+            this.pageGuildInfoGuildBankBanklogsBanklogItemBindingSource.DataSource = typeof(pageGuildInfoGuildBankBanklogsBanklogItem);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 543);
-            this.Controls.Add(this.AddItemsCheckbox);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(840, 558);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Guild Bank Analyzer";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationsWeightsTypeSubtypeItemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationsWeightsTypeSubtypeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationsWeightsTypeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerTransactionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlayerSumary)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPlayerSumary.ResumeLayout(false);
+            this.tabPlayerSumary.PerformLayout();
+            this.tabParsedItems.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvParsedItems)).EndInit();
+            this.tabPageCache.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCachedItems)).EndInit();
+            this.tabConfigs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pageGuildInfoGuildBankBanklogsBanklogItemBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonConsolidate;
+        private System.Windows.Forms.Button buttonWebLoad;
+        private System.Windows.Forms.Button buttonFileLoad;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonSaveXML;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource playerTransactionsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn playerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberOfTransactionsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastTransactionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MoneyDeposits;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MoneyWithdrawls;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Repairs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MoneyOffset;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource configurationsWeightsTypeBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource configurationsWeightsTypeSubtypeBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvPlayerSumary;
+        private System.Windows.Forms.Button buttonSaveConfigs;
+        private System.Windows.Forms.CheckBox checkBoxCacheItems;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPlayerSumary;
+        private System.Windows.Forms.TabPage tabParsedItems;
+        private System.Windows.Forms.DataGridView dgvParsedItems;
+        private System.Windows.Forms.TabPage tabPageCache;
+        private System.Windows.Forms.DataGridView dgvCachedItems;
+        private System.Windows.Forms.BindingSource pageGuildInfoGuildBankBanklogsBanklogItemBindingSource;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Add;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource configurationsWeightsTypeSubtypeItemBindingSource;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.CheckBox AddItemsCheckbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Karma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewLinkColumn Link;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button buttonAddToCache;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TabPage tabConfigs;
     }
 }
 

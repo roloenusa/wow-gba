@@ -29,6 +29,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,6 +50,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -56,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache.cs" />
     <Compile Include="config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -83,6 +88,10 @@
     <None Include="Properties\DataSources\configurationsWeightsType.datasource" />
     <None Include="Properties\DataSources\configurationsWeightsTypeSubtype.datasource" />
     <None Include="Properties\DataSources\configurationsWeightsTypeSubtypeItem.datasource" />
+    <None Include="Properties\DataSources\NewDataSet.datasource" />
+    <None Include="Properties\DataSources\pageGuildInfoGuildBankBanklogsBanklogItem.datasource" />
+    <None Include="Properties\DataSources\PlayerTransactions.datasource" />
+    <None Include="Properties\DataSources\wowhead.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +103,7 @@
     </Compile>
     <Compile Include="PlayerTransactions.cs" />
     <Compile Include="Util.cs" />
+    <Compile Include="wowhead.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
