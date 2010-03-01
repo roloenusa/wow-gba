@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="XMLTest">
+</Property><Property Name="Solution File" Value="C:\Users\Sebastian\Documents\Code\XMLTest\XMLTest.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Sebastian\Documents\Code\XMLTest\XMLTest.suo">
+</Property><Property Name="Date" Value="Tuesday, January 05, 2010">
+</Property><Property Name="Time" Value="0:18 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="XMLTest.sln" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest.sln">
+</Event><Event ErrorLevel="0" Project="" Source="XMLTest.suo" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest.suo">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\XMLTest.csproj" Description="Project file successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\XMLTest.csproj">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Form1.cs" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Form1.cs">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Form1.Designer.cs" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\GuildBank.cs" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\GuildBank.cs">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Program.cs" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Program.cs">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Properties\Settings.settings" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Form1.resx" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Form1.resx">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\Properties\Resources.resx" Description="File successfully backed up as C:\Users\Sebastian\Documents\Code\XMLTest\Backup\XMLTest\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\XMLTest.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="XMLTest" Source="XMLTest\XMLTest.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="XMLTest.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="XMLTest.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="XMLTest" Source="XMLTest\XMLTest.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

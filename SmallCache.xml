@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/_layout/guild/bank-log.xsl"?>
+<page globalSearch="1" lang="en_us" requestUrl="/vault/guild-bank-log.xml">
+  <tabInfo subTab="guildBankLog" tab="guild" tabGroup="character" tabUrl="r=Sargeras&amp;gn=Defiant&amp;cn=Sodastereo"/>
+  <guildInfo>
+    <guildHeader battleGroup="Shadowburn" count="162" faction="0" name="Defiant" nameUrl="Defiant" realm="Sargeras" realmUrl="Sargeras" url="r=Sargeras&amp;gn=Defiant">
+      <emblem emblemBackground="20" emblemBorderColor="16" emblemBorderStyle="3" emblemIconColor="16" emblemIconStyle="141"/>
+    </guildHeader>
+    <guildMessages info="Guild rule #1 : Do nothing that will bring a bad rep to the guild name. &#10;&#10;Guild Website is mandatory:&#10;Defiant-sargeras.guildlaunch.com&#10;&#10;&#10;There is alot of info on the guild website about our raids, how loot is handed out, and the 2 tiers of officer rank we use. Please visit the site. &#10;&#10;Vent Info &#10;defiant.guildvent.net&#10;Port: 8679&#10;Guild Channels - yo-yo&#10;&#10;Requirements for Raiding&#10;1. Vent&#10;2. DBM&#10;3. Pally Power for all Paladins" motd="Raids are on the website. Gbank needs F.Lotus. Raiders need to sign up for raids to retain their rank"/>
+    <guildRanks>
+      <rank id="0" name="Guild Leader"/>
+
+      <rank id="1" name="Rank Officer"/>
+      <rank id="2" name="Judge"/>
+      <rank id="3" name="Raid Officer"/>
+      <rank id="4" name="Raider"/>
+      <rank id="5" name="Casual"/>
+      <rank id="6" name="Alt"/>
+      <rank id="7" name="Recruit"/>
+      <rank id="8" name="Penalty Box"/>
+      <rank id="9" name="Penalty Box`"/>
+
+    </guildRanks>
+    <guildBank>
+      <bags>
+        <bag icon="inv_weapon_shortblade_98" id="0" name="Guild Junk" viewable="true"/>
+        <bag icon="inv_elemental_primal_earth" id="1" name="Mining Stuff" viewable="true"/>
+        <bag icon="inv_wand_29" id="2" name="Enchanting " viewable="true"/>
+        <bag icon="inv_misc_flower_02" id="3" name="Herbs" viewable="true"/>
+        <bag icon="inv_misc_coin_02" id="4" name="Expensive Stuff" viewable="true"/>
+        <bag icon="inv_bannerpvp_02" id="5" name="Raiding" viewable="true"/>
+
+      </bags>
+      <banklogs group="1" next="" now="0" prev="0">
+        <banklog dtab="3" money="0" otab="" player="Djin" rank="4" ts="1263436258000" type="1">
+          <item count="20" icon="inv_misc_herb_whispervine" id="36905" name="Lichbloom" qi="1" subtype="" type="tradegoods"/>
+        </banklog>
+        <banklog dtab="0" money="0" otab="" player="Sophast" rank="5" ts="1263436123000" type="1">
+          <item count="1" icon="inv_scroll_06" id="17720" name="Schematic: Snowmaster 9000" qi="2" subtype="engineering" type="recipes"/>
+        </banklog>
+        <banklog dtab="3" money="0" otab="" player="Djin" rank="4" ts="1263435554000" type="1">
+
+          <item count="20" icon="inv_misc_herb_whispervine" id="36905" name="Lichbloom" qi="1" subtype="" type="tradegoods"/>
+        </banklog>
+        <banklog dtab="4" money="0" otab="" player="Schneizel" rank="4" ts="1263412161000" type="1">
+          <item count="20" icon="inv_fabric_soulcloth" id="33470" name="Frostweave Cloth" qi="1" subtype="" type="tradegoods"/>
+        </banklog>
+        <banklog dtab="4" money="0" otab="" player="Schneizel" rank="4" ts="1263410400000" type="1">
+          <item count="7" icon="inv_misc_fish_72" id="41813" name="Nettlefish" qi="1" subtype="" type="tradegoods"/>
+        </banklog>
+        <banklog dtab="4" money="0" otab="" player="Schneizel" rank="4" ts="1263410397000" type="1">
+
+          <item count="11" icon="inv_misc_fish_62" id="41806" name="Musselback Sculpin" qi="1" subtype="" type="tradegoods"/>
+        </banklog>
+
+      </banklogs>
+    </guildBank>
+  </guildInfo>
+</page>

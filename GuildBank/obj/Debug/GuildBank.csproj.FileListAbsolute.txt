@@ -1,0 +1,9 @@
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\bin\Debug\GuildBank.exe
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\bin\Debug\GuildBank.pdb
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\obj\Debug\GuildBank.Form1.resources
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\obj\Debug\GuildBank.Properties.Resources.resources
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\obj\Debug\GuildBank.csproj.GenerateResource.Cache
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\obj\Debug\GuildBank.exe
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\obj\Debug\GuildBank.pdb
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\GuildBank\bin\Debug\config.xml

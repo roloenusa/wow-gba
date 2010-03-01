@@ -1,0 +1,9 @@
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\obj\Debug\XMLTest.exe
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\obj\Debug\XMLTest.pdb
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\obj\Debug\XMLTest.Form1.resources
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\obj\Debug\XMLTest.Properties.Resources.resources
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\obj\Debug\XMLTest.csproj.GenerateResource.Cache
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\bin\Debug\config.xml
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\bin\Debug\XMLTest.exe
+C:\Users\Sebas\Documents\MyCode\XMLTest-Temp\XMLTest\bin\Debug\XMLTest.pdb

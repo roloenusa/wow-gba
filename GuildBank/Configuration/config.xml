@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configurations>
+  <property name="cache" configured="false" type="string" location=""/>
+  <property name="guildtemplate" configured="false" type="string" location=""/>
+</configurations>
